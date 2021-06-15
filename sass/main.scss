@@ -1,0 +1,282 @@
+// ### Primary
+
+$color-soft-red: hsl(7, 99%, 70%);
+$color-yellow: hsl(51, 100%, 49%);
+$color-dark-desaturated-cyan : hsl(167, 40%, 24%); //(graphic design text)
+$color-dark-blue : hsl(198, 62%, 26%); // (photography text)
+$color-dark-moderate-cyan : hsl(168, 34%, 41%); //(footer)
+
+// ### Neutral
+
+$color-very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$color-very-dark-grayish-blue: hsl(213, 9%, 39%);
+$color-dark-grayish-blue: hsl(232, 10%, 55%);
+$color-grayish-blue: hsl(210, 4%, 67%);
+$color-white: hsl(0, 0%, 100%);
+
+//gap
+$margin-bottom-medium:2em;
+$margin-bottom-small:1.5em;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1, h3, h2, h4, .menu-d li:last-child a, .header_nav--menu ul li:last-child a {
+    font-family: "Fraunces", sans-serif;
+    font-weight: 900;
+}
+
+body{
+    font-size: 18px;
+}
+body p{
+    font-family: "Barlow", sans-serif;
+
+}
+a{
+    color: $color-white;
+    text-decoration: none;
+}
+.header{
+    background:url("/landing1/images/desktop/image-header.jpg") no-repeat center / cover;
+    height: 90vh;
+
+    &_nav{
+        font-family: "Barlow", sans-serif;;
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;   
+    
+    &--logo{
+       padding: 0 1em;
+    }
+    &--menu{   
+        &>li{
+            display: inline-block;
+            padding: 1em;
+            & :hover{
+                color: $color-dark-blue;
+            }
+            &:last-child a{
+                 color: $color-very-dark-desaturated-blue;
+                 &:hover{
+                 color:$color-white;
+                 }
+            }
+            
+        }
+
+
+    } 
+    }
+}
+.btn-contact{
+    margin-right: 1.5em;
+    background-color: $color-white;
+    border-radius: 3rem;
+    padding: .6em 1em;
+    font-weight: 600;
+    font-size: .9rem;
+    transition: all .4s ease;
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.366);
+    }
+}
+.header_textbox h1{
+    text-transform: uppercase;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    letter-spacing:8px;
+    color: $color-white;
+    text-align: center;
+    &::after{
+        content: url("/landing1/images/icon-arrow-down.svg");
+        display: block;
+        padding-top: 1em;
+    }
+}
+.row-height{
+    height: 500px;
+}
+.grid{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(50%,1fr));
+    grid-auto-flow: dense;
+    &_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 80%;
+        margin-left: 2em; 
+        & h3{
+            margin-bottom:$margin-bottom-medium;
+        }   
+        & p{
+            margin-bottom: $margin-bottom-medium;
+            color:$color-dark-blue;
+        }
+        & a{
+            color:$color-dark-blue;
+            font-weight: 900;
+        }
+    }
+}
+.grid_img1{
+    background: url("/landing1/images/desktop/image-transform.jpg") no-repeat center / cover;
+}
+.grid_img2{
+    background: url("/landing1/images/desktop/image-stand-out.jpg") no-repeat center / cover;
+
+}
+.grid-img3{
+    background: url("/landing1/images/desktop/image-graphic-design.jpg") no-repeat center / cover; 
+}
+.grid-img4{
+    background: url("/landing1/images/desktop/image-photography.jpg") no-repeat center / cover;
+
+}
+
+.grid_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: center;
+    color: $color-dark-blue;
+
+
+    & p{
+        width: 350px;
+        margin:0 auto;
+        margin-bottom: $margin-bottom-medium;
+        font-size: .9rem;
+
+        }
+        & h3{
+            margin:0 auto;
+            margin-bottom:$margin-bottom-small;
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+        }
+       
+}
+
+.red-hover:hover{
+    border-bottom: 5px solid $color-soft-red;
+}
+.yellow-hover:hover{
+    border-bottom: 5px solid $color-yellow;
+
+}
+
+.testemonial-wrap{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+   
+    
+}
+.testemonials{
+    text-align: center;
+    margin-bottom: 6rem;
+     & h2{
+        padding: 7em 0 4em 0;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color:$color-grayish-blue;
+        letter-spacing: 4px;
+    }
+}
+.testemonial-1,.testemonial-2,.testemonial-3{
+    width: 22%;
+    padding:1.3em;
+    &:hover{
+            transform: scale(1.3) translateY(-3px);
+        }
+    & img{
+        width:25%;
+        margin-bottom: $margin-bottom-medium;
+        border-radius: 50%;
+    }
+    & p{
+        font-size: .8rem;
+        margin-bottom: $margin-bottom-medium;
+        color:$color-grayish-blue;
+    }
+    & h3{
+        color: $color-dark-blue;
+    }
+}
+.images{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 400px;
+}
+.img-1{
+    background: url("/landing1/images/desktop/image-gallery-milkbottles.jpg") no-repeat center / cover;
+}
+.img-2{
+    background: url("/landing1/images/desktop/image-gallery-orange.jpg") no-repeat center /cover;
+}
+.img-3{
+    background: url("/landing1/images/desktop/image-gallery-cone.jpg") no-repeat center / cover;
+}
+.img-4{
+    background: url("/landing1/images/desktop/image-gallery-sugarcubes.jpg") no-repeat center / cover;
+}
+
+footer{
+    background-color:$color-dark-moderate-cyan ;
+    text-align:center;
+    & .logo{
+        padding: 2rem;
+    }
+}
+.footer{
+    
+    &-menu{
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    list-style-type: none;
+    color:$color-dark-blue;
+    & li:hover{
+        color: $color-white;
+        cursor: pointer;
+
+    }
+}
+    &-social{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 25%;
+        margin: 0 auto;
+        padding: 2em;
+        list-style-type: none;
+        & img:hover{
+           border:1px solid $color-white;
+           border-radius: 7px;
+            cursor: pointer;
+         
+        }
+    }
+    
+}
+.logo{
+    color:#23303E;
+    text-transform: lowercase;
+}
